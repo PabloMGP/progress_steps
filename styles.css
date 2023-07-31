@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: wheat;
+}
+
+.container {
+    text-align: center;
+    margin: 200px;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+}
+
+.counter-one,
+.counter-two,
+.counter-three,
+.counter-four {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 5px solid rgb(188, 212, 188);
+    z-index: 20;
+    margin: 0;
+}
+
+.progress-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    transform: translateY(-50%);
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 10px;
+    width: 50%;
+    transform: translateY(-50%);
+    background-color: blue;
+    border-radius: 50px;
+    transition: 0.5s ease;
+}
