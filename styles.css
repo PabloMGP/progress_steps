@@ -20,10 +20,7 @@
     position: relative;
 }
 
-.counter-one,
-.counter-two,
-.counter-three,
-.counter-four {
+.counter {
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -31,6 +28,11 @@
     border: 5px solid rgb(188, 212, 188);
     z-index: 20;
     margin: 0;
+}
+
+.counter.active {
+    background-color: green;
+    border: 5px solid rgb(188, 212, 188);
 }
 
 .progress-container::before {
@@ -50,9 +52,15 @@
     top: 50%;
     left: 0;
     height: 10px;
-    width: 50%;
+    width: 0%;
     transform: translateY(-50%);
     background-color: blue;
     border-radius: 50px;
     transition: 0.5s ease;
+}
+
+@media screen and (max-width: 700px) {
+    .progress-container {
+        min-width: 400px;
+}
 }
